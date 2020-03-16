@@ -20,18 +20,11 @@ class User {
     }
 }
 
+class Admin extends User{
+    
+}
+
 const userOne = new User('mario', 'mario@xxx.com');
 const userTwo = new User('luigi', 'luigi@xxx.com');
-
-console.log(userOne, userTwo);
-userOne.login();
-userTwo.login();
-
-userOne.logout();
-userTwo.logout();
-
-userOne.incScore();
-userOne.incScore();
-
-userOne.login().logout();
-userTwo.incScore().incScore().incScore();
+const userThree = new Admin('alex', 'alex@xxx.com');
+console.log(userOne, userTwo, userThree);
