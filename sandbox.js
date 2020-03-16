@@ -21,10 +21,17 @@ class User {
 }
 
 class Admin extends User{
-    
+    deleteUser(user){
+        users = users.filter(u => u.username !== user.username)
+    }
 }
 
 const userOne = new User('mario', 'mario@xxx.com');
 const userTwo = new User('luigi', 'luigi@xxx.com');
 const userThree = new Admin('alex', 'alex@xxx.com');
-console.log(userOne, userTwo, userThree);
+
+let users = [userOne, userTwo, userThree];
+console.log(users);
+
+userThree.deleteUser(userTwo);
+console.log(users);
