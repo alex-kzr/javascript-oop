@@ -7,13 +7,16 @@ class User {
     }
     login(){
         console.log(`${this.username} just logged in`);
+        return this;
     }
     logout(){
         console.log(`${this.username} just logged out`);
+        return this;
     }
     incScore(){
         this.score += 1;
         console.log(`${this.username} has a score of ${this.score}`);
+        return this;
     }
 }
 
@@ -29,3 +32,6 @@ userTwo.logout();
 
 userOne.incScore();
 userOne.incScore();
+
+userOne.login().logout();
+userTwo.incScore().incScore().incScore();
